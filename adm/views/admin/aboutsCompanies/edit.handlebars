@@ -1,0 +1,60 @@
+<!--Inicio do conteudo administrativo-->
+            <div class="wrapper">
+                <div class="row">
+                    <div class="top-list">
+                    <span class="title-content">Editar</span>
+                    <div class="top-list-right">
+                        
+                        <a href="/abouts-companies-site?page=1" class="btn-primary">Listar</a>
+                        <a href="/abouts-companies-site/view/{{data.id}}" class="btn-primary">Visualizar</a>
+
+                    </div>
+                </div>
+                <!--Imprimir mensagens que estão na sessão-->
+                {{>_msgAdm}}
+                    <div class="content-adm">
+                    <!-- Formulário cadastrar novo usuário -->
+                   <form class="form-adm" action="/abouts-companies-site/edit" method="post">
+
+                        <input type="hidden" name="id" id="id"  value="{{data.id}}">
+
+                        <div class="row-input">
+                            <div class="column">
+                                <label class="title-input">Título:<span class="text-danger">*</span></label>
+                                <input type="text" name="titleAboutsCompanies" id="titleAboutsCompanies" class="input-adm" placeholder="Digite o título sobre empresa" value="{{data.titleAboutsCompanies}}">
+                            </div>
+                        </div>
+
+                       <div class="row-input">
+                            <div class="column">
+                                <label class="title-input">Descrição:<span class="text-danger">*</span></label>
+                                <input type="text" name="descAboutsCompanies" id="descAboutsCompanies" class="input-adm" placeholder="Digite a descrição sobre empresa" value="{{data.descAboutsCompanies}}">
+                            </div>
+                        </div>
+
+                    <div class="row-input">
+                    <div class="column">
+                        <label class="title-input">Situação:<span class="text-danger">*</span></label>
+                        <select name="situationAboutId" id="situationAboutId" class="input-adm">
+                            <option value={{#if data.SituationsAbout.dataValues.id}}{{data.SituationsAbout.dataValues.id}}{{else}}""{{/if}} hidden="hidden" selected="selected">
+                                {{#if data.SituationsAbout.dataValues.id}}
+                                    {{data.SituationsAbout.dataValues.nameSituation}}
+                                {{else}}
+                                Selecione
+                                {{/if}}
+                            </option>
+                            {{#each data.situations}}
+                                <option value="{{dataValues.id}}">{{dataValues.nameSituation}}</option>
+                            {{/each}}
+                        </select>
+                    </div>
+                    </div>
+                       
+                       
+                        <p class="text-danger mb-5 fs-4">* Campo Obrigatório</p>
+                <input type="submit" class="btn-warning" value="Editar">
+            </form>        
+        </div>
+    </div>
+</div>
+            <!--Fim do conteudo administrativo-->

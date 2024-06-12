@@ -1,0 +1,48 @@
+<!--Inicio do conteudo administrativo-->
+            <div class="wrapper">
+                <div class="row">
+                    <div class="top-list">
+                    <span class="title-content">Editar</span>
+                    <div class="top-list-right">
+                        
+                        <a href="/footer-site" class="btn-primary">Visualizar</a>
+
+                    </div>
+                </div>
+                <!--Imprimir mensagens que estão na sessão-->
+                {{>_msgAdm}}
+                    <div class="content-adm">
+                    <!-- Formulário cadastrar novo usuário -->
+                   <form class="form-adm" action="/footer-site/edit" method="post">
+
+                        <input type="hidden" name="id" id="id"  value="{{data.id}}">
+
+                        <div class="row-input">
+                            <div class="column">
+                                <label class="title-input">Título do Rodapé:<span class="text-danger">*</span></label>
+                                <input type="text" name="footerDesc" id="footerDesc" class="input-adm" placeholder="Digite o título do rodapé" value="{{data.footerDesc}}">
+                            </div>
+                        </div>
+
+                       <div class="row-input">
+                            <div class="column">
+                                <label class="title-input">Texto do Link:<span class="text-danger">*</span></label>
+                                <input type="text" name="footerTextLink" id="footerTextLink" class="input-adm" placeholder="Digite o texto do link rodapé" value="{{data.footerTextLink}}">
+                            </div>
+                        </div>
+
+                        <div class="row-input">
+                            <div class="column">
+                                <label class="title-input">Link do Rodapé:<span class="text-danger">*</span></label>
+                                <input type="text" name="footerLink" id="footerLink" class="input-adm" placeholder="Digite o link do rodapé" value="{{data.footerLink}}">
+                            </div>
+                        </div>
+                       
+                       
+                        <p class="text-danger mb-5 fs-4">* Campo Obrigatório</p>
+                <input type="submit" class="btn-warning" value="Editar">
+            </form>        
+        </div>
+    </div>
+</div>
+            <!--Fim do conteudo administrativo-->

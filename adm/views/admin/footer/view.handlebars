@@ -1,0 +1,48 @@
+<!--Inicio do conteudo administrativo-->
+            <div class="wrapper">
+                <div class="row">
+                    <div class="top-list">
+                    <span class="title-content">Rodapé</span>
+                    <div class="top-list-right">
+                     
+                        <a href="/footer-site/edit" class="btn-warning">Editar</a>
+
+                    </div>
+                </div>
+                {{>_msgAdm}}
+                
+            <div class="content-adm">
+
+              <div class="view-det-adm">
+                    <span class="view-adm-title">Título do Rodapé:</span>
+                    <span class="view-adm-info">{{footer.dataValues.footerDesc}}</span>
+                </div>
+
+                <div class="view-det-adm">
+                    <span class="view-adm-title">Texto do Link:</span>
+                    <span class="view-adm-info">{{footer.dataValues.footerTextLink}}</span>
+                </div>
+
+                <div class="view-det-adm">
+                    <span class="view-adm-title">Link do Rodapé:</span>
+                    <span class="view-adm-info">{{footer.dataValues.footerLink}}</span>
+                </div>
+
+                 <div class="view-det-adm">
+                    <span class="view-adm-title">Cadastrado:</span>
+                    <span class="view-adm-info">
+                        {{#formatDateTime footer.dataValues.createdAt}}{{/formatDateTime}}
+                        </span>
+                </div>
+                <div class="view-det-adm">
+                    <span class="view-adm-title">Editado:</span>
+                    <span class="view-adm-info">
+                        {{#formatDateTime footer.dataValues.updatedAt}}{{/formatDateTime}}
+                    </span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+            <!--Fim do conteudo administrativo-->

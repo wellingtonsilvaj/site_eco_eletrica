@@ -1,0 +1,29 @@
+<!--Inicio do conteudo administrativo-->
+            <div class="wrapper">
+                <div class="row">
+                    <div class="top-list">
+                    <span class="title-content">Cadastrar situação</span>
+                    <div class="top-list-right">
+                        <a href="/situations?page=1" class="btn-info">Listar</a>
+
+                    </div>
+                </div>
+                <!--Imprimir mensagens que estão na sessão-->
+                {{>_msgAdm}}
+                    <div class="content-adm">
+                    <!-- Formulário cadastrar novo usuário -->
+                   <form class="form-adm" action="/situations/add" method="post">
+                        <div class="row-input">
+                            <div class="column">
+                                <label class="title-input">Nome da Situação:<span class="text-danger">*</span></label>
+                                <input type="text" name="nameSituation" class="input-adm" placeholder="Nova Situação" value="{{data.nameSituation}}">
+                            </div>
+                        </div>
+
+                        <p class="text-danger mb-5 fs-4">* Campo Obrigatório</p>
+                          <input type="submit" class="btn-success" value="Cadastrar">
+            </form>       
+    </div>
+</div>
+</div>
+            <!--Fim do conteudo administrativo-->

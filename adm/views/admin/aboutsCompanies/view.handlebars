@@ -1,0 +1,66 @@
+<!--Inicio do conteudo administrativo-->
+            <div class="wrapper">
+                <div class="row">
+                    <div class="top-list">
+                    <span class="title-content">Visualizar</span>
+                    <div class="top-list-right">
+                        <a href="/abouts-companies-site?page=1" class="btn-info">Listar</a>
+                        <a href="/abouts-companies-site/edit-image/{{aboutsCompanies.dataValues.id}}" class="btn-warning">Editar Imagem</a>
+                        <a href="/abouts-companies-site/edit/{{aboutsCompanies.dataValues.id}}" class="btn-warning">Editar</a>
+                        <a href="/abouts-companies-site/delete/{{aboutsCompanies.dataValues.id}}" class="btn-danger" onclick="return confirm('Tem certeza que deseja excluir este registro?')">Apagar</a>
+
+
+                    </div>
+                </div>
+                {{>_msgAdm}}
+                   
+                    <div class="content-adm">
+                        
+                    <div class="view-det-adm">
+                    <span class="view-adm-title">Imagem:</span>
+                    <span class="view-adm-info">
+                        {{#if aboutsCompanies.dataValues.imageAboutsCompanies}}
+                            <img src="/images/about/{{aboutsCompanies.dataValues.imageAboutsCompanies}}" class="view-image-home-top">
+                        {{else}}
+                        <img src="/images/about/icon_home_top.jpg"  class="view-image-home-top">
+                        {{/if}}
+                       </span>
+                </div>
+
+                <div class="view-det-adm">
+                    <span class="view-adm-title">ID:</span>
+                    <span class="view-adm-info">{{aboutsCompanies.dataValues.id}}</span>
+                </div>
+
+            <div class="view-det-adm">
+                    <span class="view-adm-title">Título:</span>
+                    <span class="view-adm-info">{{aboutsCompanies.dataValues.titleAboutsCompanies}}</span>
+                </div>
+
+                <div class="view-det-adm">
+                    <span class="view-adm-title">Descrição:</span>
+                    <span class="view-adm-info">{{aboutsCompanies.dataValues.descAboutsCompanies}}</span>
+                </div>
+
+                <div class="view-det-adm">
+                    <span class="view-adm-title">Situação:</span>
+                    <span class="view-adm-info">{{aboutsCompanies.SituationsAbout.dataValues.nameSituation}}</span>
+                </div>
+
+                <div class="view-det-adm">
+                    <span class="view-adm-title">Cadastrado:</span>
+                    <span class="view-adm-info">
+                        {{#formatDateTime aboutsCompanies.dataValues.createdAt}}{{/formatDateTime}}
+                        </span>
+                </div>
+                <div class="view-det-adm">
+                    <span class="view-adm-title">Editado:</span>
+                    <span class="view-adm-info">
+                        {{#formatDateTime aboutsCompanies.dataValues.updatedAt}}{{/formatDateTime}}
+                    </span>
+                </div>
+        </div>
+    </div>
+</div>
+
+            <!--Fim do conteudo administrativo-->

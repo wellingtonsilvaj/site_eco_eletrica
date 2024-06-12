@@ -1,0 +1,96 @@
+<!--Inicio do conteudo administrativo-->
+            <div class="wrapper">
+                <div class="row">
+                    <div class="top-list">
+                    <span class="title-content">Editar</span>
+                    <div class="top-list-right">
+                        
+                        <a href="/home-site" class="btn-primary">Visualizar</a>
+
+                    </div>
+                </div>
+                <!--Imprimir mensagens que estão na sessão-->
+                {{>_msgAdm}}
+                    <div class="content-adm">
+                    <!-- Formulário cadastrar novo usuário -->
+                   <form class="form-adm" action="/home-site/edit-serv" method="post">
+
+                        <input type="hidden" name="id" id="id"  value="{{data.id}}">
+
+                        <div class="row-input">
+                            <div class="column">
+                                <label class="title-input">Título do Serviço:<span class="text-danger">*</span></label>
+                                <input type="text" name="titleService" id="titleService" class="input-adm" placeholder="Título do serviço" value="{{data.titleService}}">
+                            </div>
+                        </div>
+
+                       <div class="row-input">
+                            <div class="column">
+                                <label class="title-input">Ícone Um:<span class="text-danger">*</span></label>
+                                <input type="text" name="iconOne" id="iconOne" class="input-adm" placeholder="Primeiro ícone" value="{{data.iconOne}}">
+                            </div>
+                        </div>
+
+                        <div class="row-input">
+                            <div class="column">
+                                <label class="title-input">Ícone Dois:<span class="text-danger">*</span></label>
+                                <input type="text" name="iconTwo" id="iconTwo" class="input-adm" placeholder="Segundo ícone" value="{{data.iconTwo}}">
+                            </div>
+                        </div>
+
+                        <div class="row-input">
+                            <div class="column">
+                                <label class="title-input">Ícone Três:<span class="text-danger">*</span></label>
+                                <input type="text" name="iconThree" id="iconThree" class="input-adm" placeholder="Terceiro ícone" value="{{data.iconThree}}">
+                            </div>
+                        </div>
+
+                        <div class="row-input">
+                            <div class="column">
+                                <label class="title-input">Título Um do Serviço:<span class="text-danger">*</span></label>
+                                <input type="text" name="titleOneService" id="titleOneService" class="input-adm" placeholder="Título do serviço" value="{{data.titleOneService}}">
+                            </div>
+                        </div>
+                       
+                       <div class="row-input">
+                            <div class="column">
+                                <label class="title-input">Título Dois do Serviço:<span class="text-danger">*</span></label>
+                                <input type="text" name="titleTwoService" id="titleTwoService" class="input-adm" placeholder="Segundo título do serviço" value="{{data.titleTwoService}}">
+                            </div>
+                        </div>
+
+                        <div class="row-input">
+                            <div class="column">
+                                <label class="title-input">Título Três do Serviço:<span class="text-danger">*</span></label>
+                                <input type="text" name="titleThreeService" id="titleThreeService" class="input-adm" placeholder="Terceiro título do serviço" value="{{data.titleThreeService}}">
+                            </div>
+                        </div>
+
+                        <div class="row-input">
+                            <div class="column">
+                                <label class="title-input">Descrição Um do Serviço:<span class="text-danger">*</span></label>
+                                <input type="text" name="descOneService" id="descOneService" class="input-adm" placeholder="Primeira descrição" value="{{data.descOneService}}">
+                            </div>
+                        </div>
+
+                        <div class="row-input">
+                            <div class="column">
+                                <label class="title-input">Descrição Dois do Serviço:<span class="text-danger">*</span></label>
+                                <input type="text" name="descTwoService" id="descTwoService" class="input-adm" placeholder="Segunda descrição" value="{{data.descTwoService}}">
+                            </div>
+                        </div>
+
+                        <div class="row-input">
+                            <div class="column">
+                                <label class="title-input">Descrição Três do Serviço:<span class="text-danger">*</span></label>
+                                <input type="text" name="descThreeService" id="descThreeService" class="input-adm" placeholder="Terceira descrição" value="{{data.descThreeService}}">
+                            </div>
+                        </div>
+                       
+                        <p class="text-danger mb-5 fs-4">* Campo Obrigatório</p>
+                <input type="submit" class="btn-warning" value="Editar">
+            </form>        
+        </div>
+    </div>
+</div>
+            <!--Fim do conteudo administrativo-->

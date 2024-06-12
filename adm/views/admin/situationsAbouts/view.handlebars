@@ -1,0 +1,44 @@
+<!--Inicio do conteudo administrativo-->
+            <div class="wrapper">
+                <div class="row">
+                    <div class="top-list">
+                    <span class="title-content">Visualizar</span>
+                    <div class="top-list-right">
+                        <a href="/situations-abouts-site?page=1" class="btn-info">Listar</a>
+                        <a href="/situations-abouts-site/edit/{{situationsAbout.dataValues.id}}" class="btn-warning">Editar</a>
+                        <a href="/situations-abouts-site/delete/{{situationsAbout.dataValues.id}}" class="btn-danger" onclick="return confirm('Tem certeza que deseja excluir este registro?')">Apagar</a>
+
+
+                    </div>
+                </div>
+                {{>_msgAdm}}
+                    <div class="content-adm">
+                    <div class="view-det-adm">
+                    <span class="view-adm-title">ID:</span>
+                    <span class="view-adm-info">{{situationsAbout.dataValues.id}}</span>
+                </div>
+
+               
+                    <div class="view-det-adm">
+                    <span class="view-adm-title">Nome:</span>
+                    <span class="view-adm-info">{{situationsAbout.dataValues.nameSituation}}</span>
+                </div>
+
+              
+                <div class="view-det-adm">
+                    <span class="view-adm-title">Cadastrado:</span>
+                    <span class="view-adm-info">
+                        {{#formatDateTime situationsAbout.dataValues.createdAt}}{{/formatDateTime}}
+                        </span>
+                </div>
+                <div class="view-det-adm">
+                    <span class="view-adm-title">Editado:</span>
+                    <span class="view-adm-info">
+                        {{#formatDateTime situationsAbout.dataValues.updatedAt}}{{/formatDateTime}}
+                    </span>
+                </div>
+            </div>               
+        </div>
+    </div>
+</div>
+            <!--Fim do conteudo administrativo-->

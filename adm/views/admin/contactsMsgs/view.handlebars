@@ -1,0 +1,56 @@
+<!--Inicio do conteudo administrativo-->
+            <div class="wrapper">
+                <div class="row">
+                    <div class="top-list">
+                    <span class="title-content">Visualizar</span>
+                    <div class="top-list-right">
+                        <a href="/contacts-msgs?page=1" class="btn-info">Listar</a>
+                        <a href="/contacts-msgs/edit/{{contactMsg.dataValues.id}}" class="btn-warning">Editar</a>
+                        <a href="/contacts-msgs/delete/{{contactMsg.dataValues.id}}" class="btn-danger" onclick="return confirm('Tem certeza que deseja excluir este registro?')">Apagar</a>
+
+
+                    </div>
+                </div>
+                {{>_msgAdm}}
+                    <div class="content-adm">
+                    <div class="view-det-adm">
+                    <span class="view-adm-title">ID:</span>
+                    <span class="view-adm-info">{{contactMsg.dataValues.id}}</span>
+                </div>
+
+                
+                    <div class="view-det-adm">
+                    <span class="view-adm-title">Nome:</span>
+                    <span class="view-adm-info">{{contactMsg.dataValues.name}}</span>
+                </div>
+
+                
+                    <div class="view-det-adm">
+                    <span class="view-adm-title">Assunto:</span>
+                    <span class="view-adm-info">{{contactMsg.dataValues.subject}}</span>
+                </div>
+
+                
+                    <div class="view-det-adm">
+                    <span class="view-adm-title">Conteúdo:</span>
+                    <span class="view-adm-info">{{contactMsg.dataValues.content}}</span>
+                </div>
+
+              
+                <div class="view-det-adm">
+                    <span class="view-adm-title">Cadastrado:</span>
+                    <span class="view-adm-info">
+                        {{#formatDateTime contactMsg.dataValues.createdAt}}{{/formatDateTime}}
+                        </span>
+                </div>
+                <div class="view-det-adm">
+                    <span class="view-adm-title">Editado:</span>
+                    <span class="view-adm-info">
+                        {{#formatDateTime contactMsg.dataValues.updatedAt}}{{/formatDateTime}}
+                    </span>
+                </div>
+            </div>               
+        </div>
+    </div>
+</div>
+            <!--Fim do conteudo administrativo-->

@@ -1,0 +1,32 @@
+<!--Inicio do conteudo administrativo-->
+            <div class="wrapper">
+                <div class="row">
+                    <div class="top-list">
+                    <span class="title-content">Editar situação</span>
+                    <div class="top-list-right">
+                        <a href="/situations?page=1" class="btn-info">Listar</a>
+                        <a href="/situations/view/{{data.id}}" class="btn-primary">Visualizar</a>
+
+                    </div>
+                </div>
+                <!--Imprimir mensagens que estão na sessão-->
+                {{>_msgAdm}}
+                    <div class="content-adm">
+                    <!-- Formulário cadastrar novo usuário -->
+                   <form class="form-adm" action="/situations/edit" method="post">
+
+                   <input type="hidden" name="id" id="id"  value="{{data.id}}">
+                        <div class="row-input">
+                            <div class="column">
+                                <label class="title-input">Nome da Situação:<span class="text-danger">*</span></label>
+                                <input type="text" name="nameSituation" class="input-adm" placeholder="Nova Situação" value="{{data.nameSituation}}">
+                            </div>
+                        </div>
+
+                        <p class="text-danger mb-5 fs-4">* Campo Obrigatório</p>
+                          <input type="submit" class="btn-success" value="Cadastrar">
+            </form>       
+    </div>
+</div>
+</div>
+            <!--Fim do conteudo administrativo-->

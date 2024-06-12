@@ -1,0 +1,62 @@
+<!--Inicio do conteudo administrativo-->
+            <div class="wrapper">
+                <div class="row">
+                    <div class="top-list">
+                    <span class="title-content">Editar</span>
+                    <div class="top-list-right">
+                        
+                        <a href="/home-site" class="btn-primary">Visualizar</a>
+
+                    </div>
+                </div>
+                <!--Imprimir mensagens que estão na sessão-->
+                {{>_msgAdm}}
+                    <div class="content-adm">
+                    <!-- Formulário cadastrar novo usuário -->
+                   <form class="form-adm" action="/home-site/edit-top" method="post">
+
+                        <input type="hidden" name="id" id="id"  value="{{data.id}}">
+
+                        <div class="row-input">
+                            <div class="column">
+                                <label class="title-input">Título Um:<span class="text-danger">*</span></label>
+                                <input type="text" name="titleOneTop" id="titleOneTop" class="input-adm" placeholder="Título um do topo do site" value="{{data.titleOneTop}}">
+                            </div>
+                        </div>
+
+                       <div class="row-input">
+                            <div class="column">
+                                <label class="title-input">Título Dois:<span class="text-danger">*</span></label>
+                                <input type="text" name="titleTwoTop" id="titleTwoTop" class="input-adm" placeholder="Título dois do topo do site" value="{{data.titleTwoTop}}">
+                            </div>
+                        </div>
+
+                        <div class="row-input">
+                            <div class="column">
+                                <label class="title-input">Título Três:<span class="text-danger">*</span></label>
+                                <input type="text" name="titleThreeTop" id="titleThreeTop" class="input-adm" placeholder="Título três do topo do site" value="{{data.titleThreeTop}}">
+                            </div>
+                        </div>
+
+                        <div class="row-input">
+                            <div class="column">
+                                <label class="title-input">Link do Botão:<span class="text-danger">*</span></label>
+                                <input type="text" name="linkBtnTop" id="linkBtnTop" class="input-adm" placeholder="Link do botão do topo do site" value="{{data.linkBtnTop}}">
+                            </div>
+                        </div>
+
+                        <div class="row-input">
+                            <div class="column">
+                                <label class="title-input">Texto do Botão:<span class="text-danger">*</span></label>
+                                <input type="text" name="txtBtnTop" id="txtBtnTop" class="input-adm" placeholder="Texto do botão do topo do site" value="{{data.txtBtnTop}}">
+                            </div>
+                        </div>
+                       
+                       
+                        <p class="text-danger mb-5 fs-4">* Campo Obrigatório</p>
+                <input type="submit" class="btn-warning" value="Editar">
+            </form>        
+        </div>
+    </div>
+</div>
+            <!--Fim do conteudo administrativo-->

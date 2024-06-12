@@ -1,0 +1,15 @@
+git status - saber o status do git
+
+git add . adicionar arquivos
+
+
+
+git commit -m "Adicionando layout do sistema adm e login"
+
+git log --oneline puxa historico
+
+
+adicionar arquivos recentes e subir pro git
+git add . && git commit -m ""
+
+subir alterações

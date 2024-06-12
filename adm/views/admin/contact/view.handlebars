@@ -1,0 +1,98 @@
+<!--Inicio do conteudo administrativo-->
+            <div class="wrapper">
+                <div class="row">
+                    <div class="top-list">
+                    <span class="title-content">Dados de Contato</span>
+                    <div class="top-list-right">
+                     
+                        <a href="/contact-site/edit-contact" class="btn-warning">Editar</a>
+
+                    </div>
+                </div>
+                {{>_msgAdm}}
+                
+            <div class="content-adm">
+
+                <div class="view-det-adm">
+                    <span class="view-adm-title">Título:</span>
+                    <span class="view-adm-info">{{contentContact.dataValues.titleContact}}</span>
+                </div>
+
+                 
+                <div class="view-det-adm">
+                    <span class="view-adm-title">Descrição do Contato:</span>
+                    <span class="view-adm-info">{{contentContact.dataValues.subTitleContact}}</span>
+                </div>
+                
+                <div class="view-det-adm">
+                    <span class="view-adm-title">Ícone Sobre Empresa:</span>
+                    <span class="view-adm-info"><i class="{{contentContact.dataValues.iconCompany}}"></i> - {{contentContact.dataValues.iconCompany}}</span>
+                </div>
+
+                
+                <div class="view-det-adm">
+                    <span class="view-adm-title">Título Sobre Empresa:</span>
+                    <span class="view-adm-info">{{contentContact.dataValues.titleCompany}}</span>
+                </div>
+
+               
+                <div class="view-det-adm">
+                    <span class="view-adm-title">Descrição Sobre Empresa:</span>
+                    <span class="view-adm-info">{{contentContact.dataValues.descCompany}}</span>
+                </div>
+
+                 
+                <div class="view-det-adm">
+                    <span class="view-adm-title">ícone do Endereço:</span>
+                    <span class="view-adm-info"><i class="{{contentContact.dataValues.iconAddress}}"></i> - {{contentContact.dataValues.iconAddress}}</span>
+                </div>
+
+                <div class="view-det-adm">
+                    <span class="view-adm-title">Título do Endereço:</span>
+                    <span class="view-adm-info">{{contentContact.dataValues.titleAdress}}</span>
+                </div>
+
+                <div class="view-det-adm">
+                    <span class="view-adm-title">Descrição do Endereço:</span>
+                    <span class="view-adm-info">{{contentContact.dataValues.descAddress}}</span>
+                </div>
+
+
+                <div class="view-det-adm">
+                    <span class="view-adm-title">Ícone do Email:</span>
+                    <span class="view-adm-info"><i class="{{contentContact.dataValues.iconEmail}}"></i> - {{contentContact.dataValues.iconEmail}}</span>
+                </div>
+                
+
+                <div class="view-det-adm">
+                    <span class="view-adm-title">Título do Email:</span>
+                    <span class="view-adm-info">{{contentContact.dataValues.titleEmail}}</span>
+                </div>
+
+                    <div class="view-det-adm">
+                    <span class="view-adm-title">Descrição do Email:</span>
+                    <span class="view-adm-info">{{contentContact.dataValues.descEmail}}</span>
+                </div>
+
+                    <div class="view-det-adm">
+                    <span class="view-adm-title">Título do Formulário:</span>
+                    <span class="view-adm-info">{{contentContact.dataValues.titleForm}}</span>
+                </div>
+
+                <div class="view-det-adm">
+                    <span class="view-adm-title">Cadastrado:</span>
+                    <span class="view-adm-info">
+                        {{#formatDateTime contentContact.dataValues.createdAt}}{{/formatDateTime}}
+                        </span>
+                </div>
+                <div class="view-det-adm">
+                    <span class="view-adm-title">Editado:</span>
+                    <span class="view-adm-info">
+                        {{#formatDateTime contentContact.dataValues.updatedAt}}{{/formatDateTime}}
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+            <!--Fim do conteudo administrativo-->

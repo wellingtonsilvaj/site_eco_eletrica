@@ -1,0 +1,30 @@
+ <div class="container-login">
+                <div class="wrapper-login">
+                <div class="title">
+                    <span>Novo Link</span>
+                </div>
+
+                <!-- Imprimir as mensagens que estão na sessão-->
+               {{>_msg}}
+               
+               <!-- Formulário para solicitar novo link confirmar e-mail -->
+                <form class="form-login" action="/conf-email/new-conf-email" method="post">
+                      
+                    <div class="row">
+                        <i class="fa-solid fa-envelope-circle-check"></i>
+                        <input type="email" name="email" id="email" placeholder="Seu e-mail cadastrado" value="{{data.email}}">   
+                    </div>
+                   
+
+                    <div class="row button">
+                        <input type="submit" value="Enviar">
+                    </div>
+                    <div>
+                    </div>
+                        <div class="signup-link">
+                            <a href="/login">CLIQUE AQUI</a> PARA ACESSAR
+                        </div>
+                    </div>
+                </form>
+            </div>
+            
